@@ -1,0 +1,30 @@
+# Gradle / build output
+.gradle/
+.kotlin/
+build/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Local machine configuration
+local.properties
+
+# Signing material: never commit
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pem
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Release artefacts
+*.apk
+*.aab
+release-notes.md
