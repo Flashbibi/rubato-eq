@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PluralsCandidate: the remaining numbers are session ids and byte sizes, not counts. -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="PluralsCandidate">
+    <string name="app_name">rubato</string>
+    <string name="notification_listener_label">rubato – Now Playing</string>
+
+    <!-- General -->
+    <string name="action_cancel">Abbrechen</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Fortsetzen</string>
+    <string name="action_reset">Zurücksetzen</string>
+    <string name="yes">ja</string>
+    <string name="no">nein</string>
+    <string name="unknown_app">unbekannte App</string>
+    <string name="unknown_title">Unbekannter Titel</string>
+    <string name="unknown_artist">Unbekannter Künstler</string>
+    <string name="error_no_app">Keine passende App gefunden.</string>
+    <string name="error_service_start">Dienst konnte nicht gestartet werden: %1$s</string>
+    <string name="mode_global">Global (Session 0)</string>
+    <string name="mode_session">Player-Session (Broadcast)</string>
+    <string name="tone_bass">Bass</string>
+    <string name="tone_mid">Mitten</string>
+    <string name="tone_treble">Höhen</string>
+
+    <!-- Formats -->
+    <string name="format_db_short">%1$+.1f</string>
+    <string name="format_db_limit">±%1$.1f dB</string>
+    <string name="format_percent">%1$d %%</string>
+    <string name="format_fps">%1$.1f / %2$.1f Hz</string>
+    <string name="format_capture">%1$d Bytes · %2$.0f Hz</string>
+
+    <!-- Tabs -->
+    <string name="tab_live">Live</string>
+    <string name="tab_settings">Einstellungen</string>
+    <string name="tab_update">Update</string>
+    <string name="tab_debug">Debug</string>
+
+    <!-- Live screen -->
+    <string name="live_power_title">rubato aktiv</string>
+    <string name="live_power_off">Aus – keine Analyse, kein EQ</string>
+    <string name="live_power_paused">Pausiert – EQ umgangen</string>
+    <string name="live_power_active">Analyse und EQ laufen</string>
+    <string name="live_power_no_effect">Läuft, aber der EQ ist nicht aktiv (siehe Debug)</string>
+    <string name="live_permissions_missing">Es fehlen Freigaben für den Betrieb.</string>
+    <string name="live_permissions_fix">Einrichten</string>
+    <string name="live_now_playing_title">Läuft gerade</string>
+    <string name="live_nothing_playing">Keine Wiedergabe erkannt.</string>
+    <string name="live_service_off_hint">Schalte rubato ein, um die Wiedergabe zu erkennen.</string>
+    <string name="live_source">%1$s · %2$s</string>
+    <string name="live_song_pending">Song wird erkannt …</string>
+    <string name="live_song_known">Bekannter Song – gespeicherte Korrektur aktiv (%1$d s analysiert)</string>
+    <string name="live_song_corrected">Korrektur aktiv · %1$d s analysiert</string>
+    <string name="live_song_analysing">Analysiere … %1$d s (erste Korrektur nach 5 s)</string>
+    <string name="status_playing">spielt</string>
+    <string name="status_buffering">lädt</string>
+    <string name="status_paused">pausiert</string>
+    <string name="status_stopped">gestoppt</string>
+    <string name="live_spectrum_title">Spektrum</string>
+    <string name="legend_live">Live</string>
+    <string name="legend_live_compensated">Live (ohne eigenen EQ)</string>
+    <string name="legend_target">Ziel</string>
+    <string name="legend_song">Song-Mittel</string>
+    <string name="live_no_target">Noch keine Zielkurve – sie entsteht aus den analysierten Songs deiner Bibliothek.</string>
+    <string name="live_correction_title">Angewendete Korrektur (dB)</string>
+    <string name="live_auto_title">Automatik</string>
+    <string name="live_strength">Stärke</string>
+    <string name="live_max_correction">Maximale Korrektur</string>
+    <string name="live_effective_strength">Wirksame Stärke: %1$d %% (analysierte Songs: %2$d/%3$d)</string>
+    <string name="live_song_sliders_title">Dieser Song</string>
+    <string name="live_song_sliders_disabled">Sobald ein Song läuft, kannst du hier Bass, Mitten und Höhen für ihn anpassen.</string>
+    <string name="live_song_sliders_hint">Wird für diesen Song gespeichert und beim nächsten Abspielen angewendet.</string>
+
+    <!-- Settings screen -->
+    <string name="settings_taste_title">Geschmack</string>
+    <string name="settings_taste_hint">Globaler Offset auf die Zielkurve. Er wirkt mit der Stärke der Automatik, also anfangs nur anteilig (n/20).</string>
+    <string name="settings_data_title">Daten</string>
+    <string name="settings_data_counts">Gespeicherte Songs: %1$d · davon in der Zielkurve: %2$d · Trainingsbeispiele: %3$d</string>
+    <string name="settings_export">Als JSON teilen</string>
+    <string name="settings_reset">Alles löschen</string>
+    <string name="settings_reset_confirm_title">Analysedaten löschen?</string>
+    <string name="settings_reset_confirm_text">Alle Songs, gespeicherten Korrekturen, manuellen Offsets und Trainingsbeispiele werden gelöscht. Die Zielkurve beginnt von vorn.</string>
+    <string name="settings_reset_confirm">Löschen</string>
+    <string name="settings_permissions_title">Freigaben</string>
+    <string name="settings_permissions_hint">Status aller Berechtigungen und Hinweise zu Samsung-Einstellungen.</string>
+    <string name="settings_permissions_open">Einrichtung öffnen</string>
+    <string name="data_reset_done">Analysedaten gelöscht.</string>
+    <string name="export_subject">rubato-Export</string>
+    <string name="export_chooser_title">Export teilen</string>
+    <string name="export_failed">Export fehlgeschlagen: %1$s</string>
+
+    <!-- Debug screen -->
+    <string name="debug_mode_title">EQ-Modus</string>
+    <string name="debug_mode_global_hint">Ein DynamicsProcessing auf dem Output-Mix. Wirkt auf alles, was abgespielt wird.</string>
+    <string name="debug_mode_session_hint">Ein DynamicsProcessing pro Player-Session, die per Broadcast gemeldet wird (z. B. Spotify).</string>
+    <string name="debug_compensation_title">Kompensation</string>
+    <string name="debug_compensation_label">Eigenen EQ aus der Messung herausrechnen (%1$s)</string>
+    <string name="debug_compensation_hint">Richtig ist „an“, wenn der Visualizer das Signal nach unserem EQ misst. Falsch eingestellt zeigt sich so: an, obwohl er davor misst → Rückkopplung, die Korrekturen laufen bis zum Maximum. Aus, obwohl er danach misst → die Korrektur bleibt bei etwa der Hälfte. Gilt je Modus; Standard: Global aus, Session an.</string>
+    <string name="debug_visualizer_title">Visualizer</string>
+    <string name="debug_visualizer_off">aus</string>
+    <string name="debug_visualizer_running">verbunden</string>
+    <string name="debug_visualizer_error">Fehler</string>
+    <string name="debug_state">Status</string>
+    <string name="debug_fps">Frames/s (Soll)</string>
+    <string name="debug_capture">Capture</string>
+    <string name="debug_measurement">Peak/RMS-Messung</string>
+    <string name="debug_restarts">Neustarts</string>
+    <string name="debug_last_error">Letzter Fehler</string>
+    <string name="debug_effect_title">Effekt</string>
+    <string name="debug_mode">Modus</string>
+    <string name="debug_effect_none">keiner</string>
+    <string name="debug_bypassed">Umgangen (Pause)</string>
+    <string name="debug_effect_no_attachments">Kein Effekt angehängt.</string>
+    <string name="debug_attachment_active">aktiv</string>
+    <string name="debug_attachment_disabled">deaktiviert</string>
+    <string name="debug_attachment_no_control">keine Kontrolle (andere App)</string>
+    <string name="debug_attachment_error">Fehler</string>
+    <string name="debug_session_global">Session 0</string>
+    <string name="debug_session_player">Session %1$d (%2$s)</string>
+    <string name="debug_sessions_title">Gemeldete Player-Sessions</string>
+    <string name="debug_sessions_empty">Noch keine Session per Broadcast gemeldet.</string>
+    <string name="debug_gains_title">Bänder: angewendet · automatisch · live</string>
+    <string name="debug_gain_row">%1$+6.2f dB · %2$+6.2f · %3$+6.1f</string>
+    <string name="debug_log_title">Ereignisse</string>
+    <string name="debug_log_empty">Noch keine Ereignisse.</string>
+
+    <!-- Update screen -->
+    <string name="update_version_title">Version</string>
+    <string name="update_version_name">Version</string>
+    <string name="update_version_code">Build</string>
+    <string name="update_build_type">Build-Typ</string>
+    <string name="update_title">Updates</string>
+    <string name="update_disabled_debug">Der Updater ist nur im Release-Build aktiv. Debug-Builds werden über Android Studio oder adb installiert.</string>
+    <string name="update_check">Nach Updates suchen</string>
+    <string name="update_install">Update installieren</string>
+    <string name="update_confirm">Installation bestätigen</string>
+    <string name="update_changelog_title">Changelog</string>
+    <string name="update_changelog_empty">Noch nicht geladen. Suche nach Updates, um die Release-Notes zu sehen.</string>
+    <string name="update_changelog_no_notes">Keine Release-Notes.</string>
+    <string name="update_state_idle">Noch nicht geprüft.</string>
+    <string name="update_state_checking">Prüfe GitHub …</string>
+    <string name="update_state_up_to_date">Aktuell (neuestes Release: %1$s).</string>
+    <string name="update_state_available">%1$s verfügbar (%2$.1f MB)</string>
+    <string name="update_state_downloading">Lade herunter … %1$d %%</string>
+    <string name="update_state_downloading_unknown">Lade herunter …</string>
+    <string name="update_state_installing">Installiere %1$s …</string>
+    <string name="update_state_waiting">Android möchte die Installation bestätigt haben.</string>
+    <string name="update_state_failed">Fehler: %1$s</string>
+    <string name="update_error_no_asset">Release %1$s enthält keine rubato-eq.apk.</string>
+    <string name="update_error_no_confirmation">Bestätigungsdialog fehlt.</string>
+    <string name="update_error_status">Installation fehlgeschlagen (Status %1$d).</string>
+    <string name="update_error_no_release">Noch kein Release auf GitHub.</string>
+    <string name="update_error_rate_limit">GitHub-Limit erreicht, später erneut versuchen.</string>
+    <string name="update_error_http">GitHub antwortet mit HTTP %1$d.</string>
+    <string name="update_error_incomplete">Download unvollständig.</string>
+    <string name="update_error_network">Netzwerkfehler: %1$s</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_app_bar">Einrichtung</string>
+    <string name="onboarding_title">Willkommen bei rubato</string>
+    <string name="onboarding_intro">rubato erkennt, was gerade läuft, analysiert den Klang und legt einen sanften Korrektur-EQ darüber. Dafür braucht es ein paar Freigaben.</string>
+    <string name="onboarding_step">%1$d. %2$s</string>
+    <string name="onboarding_granted">Erteilt</string>
+    <string name="onboarding_done_cd">erledigt</string>
+    <string name="onboarding_open_cd">offen</string>
+    <string name="onboarding_open_settings">Einstellungen öffnen</string>
+    <string name="onboarding_open_app_info">App-Info öffnen</string>
+    <string name="onboarding_open_battery">Akku-Einstellungen öffnen</string>
+    <string name="onboarding_allow">Erlauben</string>
+    <string name="onboarding_denied_hint">Abgelehnt? Dann in der App-Info unter Berechtigungen erlauben.</string>
+    <string name="onboarding_listener_title">Benachrichtigungszugriff</string>
+    <string name="onboarding_listener_text">Damit rubato sieht, welche App was abspielt (Titel, Künstler, Dauer, Pause). Benachrichtigungen selbst werden nicht gelesen.</string>
+    <string name="onboarding_listener_restricted">Ist der Schalter gesperrt („Eingeschränkte Einstellung“)? Android sperrt das bei installierten APKs: App-Info → ⋮ → „Eingeschränkte Einstellungen zulassen“, danach hier erneut versuchen.</string>
+    <string name="onboarding_audio_title">Audioanalyse</string>
+    <string name="onboarding_audio_text">Android verlangt die Mikrofon-Berechtigung (RECORD_AUDIO), damit der Visualizer die Wiedergabe analysieren darf. rubato nimmt nichts auf und nutzt das Mikrofon nicht.</string>
+    <string name="onboarding_notifications_title">Benachrichtigungen</string>
+    <string name="onboarding_notifications_text">Für die Statusanzeige mit Pause/Fortsetzen und Hinweise nach Updates.</string>
+    <string name="onboarding_battery_title">Akku-Optimierung ignorieren</string>
+    <string name="onboarding_battery_text">Damit Android den Hintergrunddienst nicht beendet.</string>
+    <string name="onboarding_battery_action">Ausnahme anfordern</string>
+    <string name="onboarding_install_title">Unbekannte Apps installieren</string>
+    <string name="onboarding_install_text">Für den eingebauten Updater, der neue Versionen von GitHub installiert.</string>
+    <string name="onboarding_auto_blocker_title">Samsung Auto Blocker ausschalten</string>
+    <string name="onboarding_auto_blocker_text">Einstellungen → Sicherheit und Datenschutz → Auto Blocker. Solange er an ist, blockiert er die Installation von APKs und damit die Updates.</string>
+    <string name="onboarding_never_sleeping_title">„Nie schlafende Apps“</string>
+    <string name="onboarding_never_sleeping_text">Einstellungen → Akku → Hintergrundnutzungslimits → Nie schlafende Apps → rubato hinzufügen. Sonst kann One UI den Dienst trotz Ausnahme einschläfern.</string>
+    <string name="onboarding_required_missing">Benachrichtigungszugriff und Audioanalyse sind Pflicht, ohne sie startet der Dienst nicht.</string>
+    <string name="onboarding_done">Fertig</string>
+
+    <!-- Notifications -->
+    <string name="channel_service_name">Hintergrunddienst</string>
+    <string name="channel_service_description">Zeigt den aktuellen Song und die Korrektur, mit Pause/Fortsetzen.</string>
+    <string name="channel_alerts_name">Hinweise</string>
+    <string name="channel_alerts_description">Hinweise nach Updates oder Neustarts.</string>
+    <string name="notif_service_idle_title">rubato aktiv</string>
+    <string name="notif_service_paused">Pausiert – EQ umgangen</string>
+    <string name="notif_service_no_access">Benachrichtigungszugriff fehlt</string>
+    <string name="notif_service_no_playback">Keine Wiedergabe</string>
+    <string name="notif_service_effect_error">EQ nicht aktiv – siehe Debug</string>
+    <string name="notif_service_waiting">Song wird erkannt …</string>
+    <string name="notif_service_analysing">Analysiere … %1$d s</string>
+    <string name="notif_service_correction">Bass %1$+.1f · Mitten %2$+.1f · Höhen %3$+.1f dB</string>
+    <string name="notif_service_known">Gespeichert: %1$s</string>
+    <string name="notif_update_installed_title">Update installiert</string>
+    <string name="notif_boot_title">Gerät neu gestartet</string>
+    <string name="notif_start_denied_title">rubato konnte nicht starten</string>
+    <string name="notif_tap_to_start">Tippen zum Starten</string>
+
+    <!-- Event log -->
+    <string name="log_engine_started">Engine gestartet</string>
+    <string name="log_engine_stopped">Engine gestoppt</string>
+    <string name="log_engine_error">Unerwarteter Fehler in der Engine</string>
+    <string name="log_library_loaded">Zielkurve geladen (Songs: %1$d)</string>
+    <string name="log_library_added">In Zielkurve aufgenommen: %1$s (Songs: %2$d)</string>
+    <string name="log_mode_changed">EQ-Modus: %1$s</string>
+    <string name="log_compensation_on">Kompensation an</string>
+    <string name="log_compensation_off">Kompensation aus</string>
+    <string name="log_song_started">Song: %1$s (%2$s)</string>
+    <string name="log_song_finished">Song beendet: %1$s, %2$d s analysiert</string>
+    <string name="log_song_known">Bekannter Song (%1$d× gespielt) – gespeicherte Korrektur aktiv</string>
+    <string name="log_first_correction">Erste Korrektur: %1$s</string>
+    <string name="log_manual_saved">Manuelle Korrektur %1$s: Bass %2$+.1f, Mitten %3$+.1f, Höhen %4$+.1f dB</string>
+    <string name="log_training_logged">Trainingsbeispiel gespeichert: %1$s</string>
+    <string name="log_paused">Pausiert</string>
+    <string name="log_resumed">Fortgesetzt</string>
+    <string name="log_no_notification_access">Kein Benachrichtigungszugriff – Songs werden nicht erkannt</string>
+    <string name="log_data_reset">Analysedaten gelöscht</string>
+    <string name="log_db_read_failed">Datenbank lesen fehlgeschlagen</string>
+    <string name="log_db_write_failed">Datenbank schreiben fehlgeschlagen</string>
+    <string name="log_session_opened">Player-Session %1$d geöffnet (%2$s)</string>
+    <string name="log_session_closed">Player-Session %1$d geschlossen (%2$s)</string>
+    <string name="log_visualizer_started">Visualizer verbunden: %1$d Bytes, %2$.1f Hz, Abtastrate %3$d Hz</string>
+    <string name="log_visualizer_failed">Visualizer konnte nicht gestartet werden</string>
+    <string name="log_visualizer_stopped">Visualizer gestoppt</string>
+    <string name="log_visualizer_stalled">Visualizer liefert keine Frames mehr – Neustart</string>
+    <string name="log_effect_attached_global">DynamicsProcessing auf Session 0 angehängt</string>
+    <string name="log_effect_attached_session">DynamicsProcessing an Session %1$d angehängt (%2$s)</string>
+    <string name="log_effect_attach_failed">Anhängen an Session %1$d fehlgeschlagen</string>
+    <string name="log_effect_enable_failed">Effekt auf Session %1$d lässt sich nicht aktivieren (%2$d)</string>
+    <string name="log_effect_no_control">Keine Kontrolle über den Effekt auf Session %1$d (andere App hat Vorrang)</string>
+    <string name="log_effect_control_regained">Kontrolle über Session %1$d zurück</string>
+    <string name="log_effect_update_failed">EQ-Update auf Session %1$d fehlgeschlagen</string>
+    <string name="log_effect_mode">Effekt-Modus aktiv: %1$s</string>
+    <string name="log_fgs_denied">Foreground-Service vom System abgelehnt</string>
+    <string name="log_restart_after_update">Update installiert – Hinweis zum Starten angezeigt</string>
+    <string name="log_restart_after_boot">Neustart – Hinweis zum Starten angezeigt</string>
+    <string name="log_update_available">Update verfügbar: %1$s</string>
+    <string name="log_update_check_failed">Update-Prüfung fehlgeschlagen</string>
+    <string name="log_update_install_failed">Update fehlgeschlagen</string>
+    <string name="log_update_committed">Update an den Installer übergeben</string>
+    <string name="log_update_needs_confirmation">Installer verlangt eine Bestätigung</string>
+    <string name="log_update_installed">Update installiert</string>
+    <string name="log_update_status">Installer meldet Status %1$d: %2$s</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Five EQ bars around a target line, inside the 66 dp safe zone of the adaptive icon. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="@color/launcher_foreground"
+        android:pathData="M29,43h6v22h-6z M40,36h6v36h-6z M51,41h6v26h-6z M62,34h6v40h-6z M73,44h6v20h-6z" />
+    <path
+        android:fillColor="@color/launcher_accent"
+        android:pathData="M25,53h58v2h-58z" />
+</vector>

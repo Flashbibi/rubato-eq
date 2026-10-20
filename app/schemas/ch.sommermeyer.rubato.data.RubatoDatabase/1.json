@@ -1,0 +1,287 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "136751e0d9c7117046b98a2fefc0b711",
+    "entities": [
+      {
+        "tableName": "songs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`songKey` TEXT NOT NULL, `title` TEXT NOT NULL, `artist` TEXT NOT NULL, `album` TEXT, `durationMs` INTEGER NOT NULL, `sourcePackage` TEXT NOT NULL, `firstPlayedAt` INTEGER NOT NULL, `lastPlayedAt` INTEGER NOT NULL, `playCount` INTEGER NOT NULL, `analyzedMs` INTEGER NOT NULL, `frameCount` INTEGER NOT NULL, `bandPowerMean` TEXT NOT NULL, `spectrumDb` TEXT NOT NULL, `autoCorrectionDb` TEXT NOT NULL, `appliedCorrectionDb` TEXT NOT NULL, `manualBassDb` REAL NOT NULL, `manualMidDb` REAL NOT NULL, `manualTrebleDb` REAL NOT NULL, `inLibrary` INTEGER NOT NULL, `compensated` INTEGER NOT NULL, `eqMode` TEXT NOT NULL, PRIMARY KEY(`songKey`))",
+        "fields": [
+          {
+            "fieldPath": "songKey",
+            "columnName": "songKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artist",
+            "columnName": "artist",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "album",
+            "columnName": "album",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "durationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourcePackage",
+            "columnName": "sourcePackage",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstPlayedAt",
+            "columnName": "firstPlayedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastPlayedAt",
+            "columnName": "lastPlayedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playCount",
+            "columnName": "playCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "analyzedMs",
+            "columnName": "analyzedMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frameCount",
+            "columnName": "frameCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bandPowerMean",
+            "columnName": "bandPowerMean",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "spectrumDb",
+            "columnName": "spectrumDb",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "autoCorrectionDb",
+            "columnName": "autoCorrectionDb",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appliedCorrectionDb",
+            "columnName": "appliedCorrectionDb",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manualBassDb",
+            "columnName": "manualBassDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manualMidDb",
+            "columnName": "manualMidDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manualTrebleDb",
+            "columnName": "manualTrebleDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "inLibrary",
+            "columnName": "inLibrary",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "compensated",
+            "columnName": "compensated",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eqMode",
+            "columnName": "eqMode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "songKey"
+          ]
+        }
+      },
+      {
+        "tableName": "training_examples",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `createdAt` INTEGER NOT NULL, `songKey` TEXT NOT NULL, `title` TEXT NOT NULL, `artist` TEXT NOT NULL, `durationMs` INTEGER NOT NULL, `sourcePackage` TEXT NOT NULL, `analyzedMs` INTEGER NOT NULL, `spectrumDb` TEXT NOT NULL, `targetDb` TEXT NOT NULL, `autoCorrectionDb` TEXT NOT NULL, `manualBassDb` REAL NOT NULL, `manualMidDb` REAL NOT NULL, `manualTrebleDb` REAL NOT NULL, `strength` REAL NOT NULL, `maxCorrectionDb` REAL NOT NULL, `tasteBassDb` REAL NOT NULL, `tasteTrebleDb` REAL NOT NULL, `librarySongs` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "songKey",
+            "columnName": "songKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artist",
+            "columnName": "artist",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "durationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourcePackage",
+            "columnName": "sourcePackage",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "analyzedMs",
+            "columnName": "analyzedMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "spectrumDb",
+            "columnName": "spectrumDb",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetDb",
+            "columnName": "targetDb",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "autoCorrectionDb",
+            "columnName": "autoCorrectionDb",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manualBassDb",
+            "columnName": "manualBassDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manualMidDb",
+            "columnName": "manualMidDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manualTrebleDb",
+            "columnName": "manualTrebleDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "strength",
+            "columnName": "strength",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxCorrectionDb",
+            "columnName": "maxCorrectionDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tasteBassDb",
+            "columnName": "tasteBassDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tasteTrebleDb",
+            "columnName": "tasteTrebleDb",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "librarySongs",
+            "columnName": "librarySongs",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_training_examples_songKey",
+            "unique": false,
+            "columnNames": [
+              "songKey"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_training_examples_songKey` ON `${TABLE_NAME}` (`songKey`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '136751e0d9c7117046b98a2fefc0b711')"
+    ]
+  }
+}
